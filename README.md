@@ -60,7 +60,7 @@ If executable software code is added later, it may be licensed separately under 
 
 A reasonable attribution is:
 
-> Legal Ops Lab, <AUTHOR NAME>, repository URL, licensed under CC BY 4.0.
+> Legal Ops Lab, Jan Kriszeleit, https://github.com/jankriszeleit-lgtm/legal-ops-lab, licensed under CC BY 4.0.
 
 For substantial adaptations, please also indicate that the material has been modified.
 

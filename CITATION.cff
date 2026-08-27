@@ -3,7 +3,7 @@ message: "If you use or adapt material from this repository, please cite the rep
 title: "Legal Ops Lab"
 type: software
 authors:
-  - family-names: "<SURNAME>"
-    given-names: "<GIVEN NAME>"
-repository-code: "<PUBLIC REPOSITORY URL>"
+  - family-names: "Kriszeleit"
+    given-names: "Jan"
+repository-code: "https://github.com/jankriszeleit-lgtm/legal-ops-lab"
 license: CC-BY-4.0
