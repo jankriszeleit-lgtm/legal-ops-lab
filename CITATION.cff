@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use or adapt material from this repository, please cite the repository and indicate changes."
+title: "Legal Ops Lab"
+type: software
+authors:
+  - family-names: "<SURNAME>"
+    given-names: "<GIVEN NAME>"
+repository-code: "<PUBLIC REPOSITORY URL>"
+license: CC-BY-4.0
