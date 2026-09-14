@@ -70,7 +70,8 @@ Recommended:
 
 7. connected write happy path;
 
-8. role-bleed/specialist-adapter tests;
+8. role-bleed/specialist-adapter tests, including capability-return provenance
+   (P-27) and adapter-absent degradation (P-28);
 
 9. closeout.
 
@@ -307,6 +308,32 @@ Pass: affected parts patched; delta clear; full rewrite only if frame collapses.
 Use a completed Work Item with supplied actual work.
 
 Pass: Plan vs Reality, unnecessary/missing work and reusable learning; no invented execution.
+
+## 31a. P-27 — Capability return is not user input
+
+Control Layer, Planner side. Run a plan, then supply a **structured capability
+return** from a specialist workflow (§7.2 seventh class, `CAPABILITY_RETURN`) —
+for example a professional-judgment result carrying its own typed route.
+
+Pass: the return is classified as a capability return and **not** as one of the six
+user classes; its originating capability and its own route vocabulary survive
+verbatim; the plan is patched under §19 with unaffected parts preserved; the
+receipt appears in `capability_return_refs` as a reference, with no specialist
+content copied into Planner state.
+
+Fail (any one): the return is acknowledged as a user statement or correction; the
+originating route is replaced by a planning category; the specialist conclusion is
+restated as a Planner finding; the whole plan is rewritten although only part is
+affected; `plan_effect` is used for it — that field belongs to the §12.5
+Direct-Action receipt and to nothing else.
+
+## 31b. P-28 — Judgment adapter absent
+
+Run the same Work Item with **no** judgment adapter bound (Implementation §16).
+
+Pass: planning proceeds; the missing capability is named and its effect on coverage
+stated; no professional conclusion is simulated to fill the gap; no bounce loop is
+started to look for the adapter.
 
 ## 32. Pilot evaluation template
 

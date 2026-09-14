@@ -307,7 +307,17 @@ Where an optional specialist suite is present, the host may bind:
 - external communication/drafting workflow;
 - Knowledge Stacks;
 - authoritative tool inventory;
-- suite Run Observability runtime.
+- suite Run Observability runtime;
+- professional-judgment workflow, through a judgment adapter.
+
+The judgment adapter is a translation seam, not a planning or judgment owner. It
+carries planning context out to that workflow and brings its typed result back as
+a `CAPABILITY_RETURN` (Core §7.2), keeping both vocabularies intact: the
+originating professional route is preserved verbatim beside whatever operational
+need is derived from it, and no professional conclusion is restated as a planning
+category. It creates no workstream, action, sequence or resource decision — those
+stay Planner-owned — and it does not make the judgment workflow a precondition of
+planning: a missing judgment adapter degrades locally like any other.
 
 Those adapters improve capability but do not change Planner order/guards.
 

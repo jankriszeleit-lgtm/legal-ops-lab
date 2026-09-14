@@ -368,6 +368,19 @@ Any time after P0, classify new user input as:
 - preference/calibration change;
 - noise.
 
+A seventh class exists for input that does not come from the user:
+
+- structured capability / specialist return — `CAPABILITY_RETURN`.
+
+A `CAPABILITY_RETURN` is the typed result of work a specialist workflow performed
+under §0.2. It MUST NOT be reclassified into one of the six user classes: doing so
+would destroy its provenance and present a specialist result as something the user
+said. Its originating capability, its own route or result vocabulary and its
+reference stay intact; this prompt does not reinterpret them and does not restate
+them as its own findings. Where it is unclear whether input is a user statement or
+a capability return, treat it as user input and say so — an unmarked return is not
+promoted to a specialist result.
+
 Acknowledge material input briefly.
 
 Later explicit correction overrides earlier state, but show the change; never silently rewrite history.
@@ -810,11 +823,17 @@ workstreams/actions
 research briefs / alignment targets
 human decisions / overrides
 PL-ACT receipts
+capability_return_refs
 QC findings
 next step
 replan deltas
 closeout state
 ```
+
+`capability_return_refs` holds references to received `CAPABILITY_RETURN` inputs
+(§7.2) — origin, scope and a pointer, nothing more. Specialist-owned content is not
+copied into this state; it stays behind the reference and remains owned by the
+workflow that produced it (G-7).
 
 Do not invent runtime IDs, token/timing fields or tool events inside this state.
 
