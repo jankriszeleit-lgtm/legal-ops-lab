@@ -33,7 +33,8 @@ legal-work-planner/
         ├── USER_GUIDE_LEGAL_WORK_PLANNER.md   working manual
         ├── 01_INSTALLATION/
         ├── 02_PROMPTS/
-        └── 03_TESTING/
+        ├── 03_TESTING/
+        └── 04_ON_DEMAND/                      optional modules, loaded on request
 ```
 
 A release should state:
@@ -76,7 +77,9 @@ Twelve documents: a bundle overview, a working manual, six installation
 documents including the four `ANL_` annexes, the three `PRT_` prompts, and the
 test and pilot specification. See
 [`releases/2026-08-27/README.md`](releases/2026-08-27/README.md) for the
-release index, installation sources and known limitations.
+release index, installation sources and known limitations. An optional
+on-demand method module, the plan stress test, was added on 2026-10-09; it is
+read-only and not part of the persistent installation.
 
 The public edition is standalone: no specialist suite component is required in
 order to plan, and specialist components attach only as optional adapters.

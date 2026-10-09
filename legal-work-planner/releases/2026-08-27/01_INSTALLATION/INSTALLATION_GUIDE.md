@@ -14,6 +14,7 @@ PRT_PLANNER_CORE
 + ANL_PLANNER_ENVIRONMENT
 + ANL_PLANNER_RESOURCES
 + optional ANL_PLANNER_MATTER
+[+ optional 04_ON_DEMAND modules — never persistent, loaded on explicit request only]
 ```
 
 The annexes are separate because they change for different reasons.
@@ -47,6 +48,10 @@ Workspace/resource owner. Review when material people/knowledge/method/tool reso
 ### ANL_PLANNER_MATTER
 
 Matter/project owner. Optional and local to the active matter.
+
+### 04_ON_DEMAND modules
+
+Optional method modules, currently `PRT_PLANNER_STRESS_TEST`. Keep them available to the host but do not install them persistently. The host loads a module only on an explicit user request for what it does (Implementation §6 ON_DEMAND); it is read-only and never changes the plan.
 
 ## 3. Host patterns
 

@@ -129,6 +129,8 @@ Load selected detail only after a resource/method is chosen:
 - deep precedent set;
 - detailed tool/provider documentation.
 
+Optional method modules shipped with the release under `04_ON_DEMAND/` are ON_DEMAND context of this kind; currently `PRT_PLANNER_STRESS_TEST.md`. Load one only on an explicit user request for what that module does, for example a request to stress-test an existing plan. A loaded module is read-only: its output is a recommendation whose proposed changes are `PROPOSAL` (Core G-6); it is not Core §7.2 input and it triggers neither §19 replanning nor §12 direct action. Ordinary `PL-PLAN`, `PL-RENDER`, `PL-STATUS` and `PL-REPLAN` runs do not load it.
+
 If the host cannot technically phase-gate static context, preserve the same order in reasoning.
 
 ## 7. Environment resolution

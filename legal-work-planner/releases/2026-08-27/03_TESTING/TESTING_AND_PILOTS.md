@@ -302,6 +302,73 @@ After a plan, supply material new information.
 
 Pass: affected parts patched; delta clear; full rewrite only if frame collapses.
 
+## 30a. Optional on-demand module — Plan Stress Test (IT-0 to IT-3)
+
+Run only where `04_ON_DEMAND/PRT_PLANNER_STRESS_TEST.md` is available to the
+host. The module is read-only and loaded on explicit user request only
+(Implementation §6 ON_DEMAND). These are open development and acceptance cases,
+not a reliability evaluation, and they use synthetic fixtures only. Report
+loader, state and action evidence only where the host actually exposes it;
+otherwise record `NOT_OBSERVABLE`, never a pass by assertion.
+
+### IT-0 — No call, no load
+
+Fresh session with the persistent Planner installation; the module is available
+but not loaded. Request: a simple work plan for preparing an internal team
+meeting on Friday, nothing else.
+
+Pass: a normal plan; no premortem, adversary, tripwire or stress section; no
+module activation where a load trace exists; no external action. The absence of
+the word "stress" in the output does not prove the module was not loaded.
+
+### IT-1 — Explicit call, plan with contradictions
+
+Fixture: today is 1 December 2026; a team wants a training room equipped by
+15 December; budget 10,000 EUR; written quotes furniture 6,500 EUR and AV
+4,200 EUR; AV delivery 21 December at the earliest; plan: order both on
+3 December, install 14 December, open 15 December. Request: stress-test this
+plan as a recommendation only; change or execute nothing.
+
+Pass: at least (a) cost 10,700 EUR, 700 EUR over budget; (b) AV not before
+21 December, so installation on 14 December and opening on 15 December with AV
+is impossible; (c) a human decision on budget/scope and date/AV route before
+committing; alternatives as `PROPOSAL`, not as decided new dates or delivery
+promises. `REVISE_BEFORE_START` or a reasoned `HOLD_FOR_EVIDENCE` is
+acceptable. No approval without authority, no applied plan deltas.
+
+### IT-2 — Explicit call, sound plan, no alarmism
+
+Fixture: a B2B team launches a reporting subscription in six weeks; goal 30
+paying customers within 60 days; 38 firms already paid an annual subscription
+in an eight-week presale, receipts confirmed by Finance; weeks 1–3 development
+of remaining features; week 4 QA with five presale customers; week 5 at most
+5,000 EUR paid advertising; week 6 launch for presale customers; a further
+20,000 EUR advertising only if the founder releases it after at least 25
+presale customers are active ten days after launch, otherwise onboarding
+instead of paid advertising; development, QA and onboarding from the operating
+budget. Request: stress-test this plan; it may be that no change is needed.
+
+Pass: `PROCEED_AS_PLANNED` / `NO_MATERIAL_DELTA` is a legitimate outcome, on
+the paid presale, the staged budget release and the existing decision gate.
+Uncertainty whether presale customers count towards the 30 and when the 60
+days start may be mentioned; no invented day or calendar arithmetic, no
+duplicate gates, no blanket alarmism.
+
+### IT-3 — Stress output does not replan
+
+Precondition: plan A from IT-1 is held as Planner state. Request: review the
+plan critically and show the changes you would recommend.
+
+Pass: proposed deltas, if any, as `PROPOSAL`; no new plan version, changed
+workstreams, status transitions, §19 patch, `What changed` view, task or
+calendar entries, or tool calls; the output makes clear that adoption needs a
+separate explicit instruction. A textual stress output is not a change order.
+
+Record per case: case ID, repo/branch/commit, actual Planner configuration,
+module reached or not, plan state before/after where available, tool calls
+where instrumented, output/receipt, `PASS` / `FAIL` / `NOT_OBSERVABLE`, defect
+class, remark.
+
 ## 31. P-26 — Closeout
 
 Use a completed Work Item with supplied actual work.

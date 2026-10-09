@@ -45,6 +45,7 @@ working manual.
 | `02_PROMPTS` | [`PRT_PLANNER_IMPLEMENTATION.md`](02_PROMPTS/PRT_PLANNER_IMPLEMENTATION.md) | host, context, connector and runtime adapter rules |
 | `02_PROMPTS` | [`PRT_PLANNER_RENDERER.md`](02_PROMPTS/PRT_PLANNER_RENDERER.md) | user-facing rendering |
 | `03_TESTING` | [`TESTING_AND_PILOTS.md`](03_TESTING/TESTING_AND_PILOTS.md) | test, pilot and evaluation specification |
+| `04_ON_DEMAND` | [`PRT_PLANNER_STRESS_TEST.md`](04_ON_DEMAND/PRT_PLANNER_STRESS_TEST.md) | optional plan stress test; loaded on explicit request only, read-only; added 2026-10-09 |
 
 ## Installation sources
 
@@ -57,6 +58,14 @@ Install the three prompts together, then the annexes:
 - [`01_INSTALLATION/ANL_PLANNER_ENVIRONMENT.md`](01_INSTALLATION/ANL_PLANNER_ENVIRONMENT.md)
 - [`01_INSTALLATION/ANL_PLANNER_RESOURCES.md`](01_INSTALLATION/ANL_PLANNER_RESOURCES.md)
 - [`01_INSTALLATION/ANL_PLANNER_MATTER.md`](01_INSTALLATION/ANL_PLANNER_MATTER.md) — optional, per matter
+
+Not part of the persistent installation:
+[`04_ON_DEMAND/PRT_PLANNER_STRESS_TEST.md`](04_ON_DEMAND/PRT_PLANNER_STRESS_TEST.md)
+is an optional method module the host loads only when the user explicitly asks
+to stress-test an existing plan, for example *"Stress-test this plan as a
+recommendation only; change nothing."* It never changes the plan and triggers
+no replanning or action. Test home: IT-0 to IT-3 in
+[`03_TESTING/TESTING_AND_PILOTS.md`](03_TESTING/TESTING_AND_PILOTS.md).
 
 The four annexes ship as empty templates. They are separate because they have
 different owners and lifecycles; merging them to reduce file count defeats the
@@ -83,7 +92,10 @@ Stated by the package itself:
 - prompt-local action receipts are not a persistent technical audit log;
 - connected write actions must pass the negative-path tests before any
   happy-path use;
-- full orchestration and live execution tracking are out of scope.
+- full orchestration and live execution tracking are out of scope;
+- the optional plan stress test module is a recommendation-only aid,
+  plausibility-probed on two synthetic cases and not field validated; a
+  designed tripwire is not a monitored one.
 
 Run the test suite in
 [`03_TESTING/TESTING_AND_PILOTS.md`](03_TESTING/TESTING_AND_PILOTS.md) before

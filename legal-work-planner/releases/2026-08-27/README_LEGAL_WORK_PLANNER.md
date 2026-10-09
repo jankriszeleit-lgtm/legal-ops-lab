@@ -40,6 +40,7 @@ Specialist components may be attached as optional adapters. Their absence must n
 | `02_PROMPTS` | [`PRT_PLANNER_IMPLEMENTATION.md`](02_PROMPTS/PRT_PLANNER_IMPLEMENTATION.md) | host/context/connector/runtime adapter rules |
 | `02_PROMPTS` | [`PRT_PLANNER_RENDERER.md`](02_PROMPTS/PRT_PLANNER_RENDERER.md) | user-facing rendering |
 | `03_TESTING` | [`TESTING_AND_PILOTS.md`](03_TESTING/TESTING_AND_PILOTS.md) | consolidated tests, pilots and evaluation template |
+| `04_ON_DEMAND` | [`PRT_PLANNER_STRESS_TEST.md`](04_ON_DEMAND/PRT_PLANNER_STRESS_TEST.md) | optional on-demand plan stress test, read-only; not part of the persistent install |
 
 The package uses four annexes because they have different owners/lifecycles. That is deliberate locality, not document sprawl.
 
