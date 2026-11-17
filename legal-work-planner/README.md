@@ -34,7 +34,8 @@ legal-work-planner/
         ├── 01_INSTALLATION/
         ├── 02_PROMPTS/
         ├── 03_TESTING/
-        └── 04_ON_DEMAND/                      optional modules, loaded on request
+        ├── 04_ON_DEMAND/                      optional modules, loaded on request
+        └── 05_HOST_ADAPTER/                   host code/tests where supplied
 ```
 
 A release should state:
@@ -57,6 +58,26 @@ parallel source of truth, and where a generated asset disagrees with the
 release directory, the release directory is correct.
 
 ## Releases
+
+### 2026-11-17 — automatic non-canonical Work Plan DOCX (proposed)
+
+Location: [`releases/2026-11-17/`](releases/2026-11-17/)
+
+New dated output-contract revision, pending PR review. Created/updated plans
+keep their canonical artifact and gain a full editable DOCX reading copy when
+actual generation and download capabilities exist. Missing capabilities or
+export errors are explicit and do not block canonical planning. No DOCX
+roundtrip, schema migration or second plan store.
+
+Includes a Python standard-library reference writer, automated synthetic tests,
+CI and actual-host acceptance cases. Concrete host bindings and model pilots
+remain **unverified**; this is not a field-maturity claim. The planning method
+and SILENT Run Observability snapshot `v0.1` are unchanged. Installation
+Markdown remains canonical; generated Work Plan DOCX files are separate runtime
+outputs. The `2026-08-27` release is preserved.
+
+See the [release index](releases/2026-11-17/README.md) and
+[host binding guide](releases/2026-11-17/05_HOST_ADAPTER/README.md).
 
 ### 2026-08-27 — first public edition
 
