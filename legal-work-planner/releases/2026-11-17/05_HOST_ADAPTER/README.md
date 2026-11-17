@@ -3,7 +3,9 @@
 This executable reference adapter implements the output boundary in
 Implementation §12.1. It uses Python 3.10+ and the standard library. It does not
 run the Planner, store plan status, import Word, send messages or provide a web
-server. Code and fixtures use the repository's CC BY 4.0 license.
+server. The adapter code, tests and synthetic JSON fixture are licensed under
+[Apache License 2.0](LICENSE), as required for software by `REPO_SETUP.md`.
+Documentation remains under the repository’s CC BY 4.0 license.
 
 ## Bind to a host
 

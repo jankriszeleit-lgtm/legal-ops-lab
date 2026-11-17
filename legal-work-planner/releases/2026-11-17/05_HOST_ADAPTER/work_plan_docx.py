@@ -1,4 +1,5 @@
-"""One-way DOCX output for a frozen JSON professional plan (CC-BY-4.0).
+# SPDX-License-Identifier: Apache-2.0
+"""One-way DOCX output for a frozen JSON professional plan.
 
 No planning, canonical writes, imports, telemetry, network or persistent export
 registry. The host owns permission and the real attachment/download callback.

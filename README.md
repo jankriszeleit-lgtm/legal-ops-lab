@@ -54,7 +54,7 @@ You may share and adapt the material, including commercially, provided that you 
 
 See [`LICENSE.md`](LICENSE.md).
 
-If executable software code is added later, it may be licensed separately under a software license such as Apache License 2.0. The applicable license will be stated in or next to that code.
+The Legal Work Planner [DOCX adapter code, tests and synthetic fixture](legal-work-planner/releases/2026-11-17/05_HOST_ADAPTER/) are licensed separately under [Apache License 2.0](legal-work-planner/releases/2026-11-17/05_HOST_ADAPTER/LICENSE). Prompts and documentation remain under CC BY 4.0.
 
 ## Attribution
 

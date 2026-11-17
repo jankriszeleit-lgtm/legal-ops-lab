@@ -12,7 +12,7 @@ STATUS: WORKING / NOT FIELD VALIDATED
 |---|---|
 | Release date | 2026-11-17 |
 | Status | Proposed working public edition; pending PR review. Not a maturity claim. |
-| License | CC BY 4.0 — see [`LICENSE.md`](../../../LICENSE.md) |
+| License | Documentation: CC BY 4.0 — see [`LICENSE.md`](../../../LICENSE.md). Adapter code, tests and fixture: [Apache-2.0](05_HOST_ADAPTER/LICENSE). |
 | Field validation | **Not field validated.** Pilots remain required. |
 | Language | English |
 | Canonical installation source | **Markdown**, the files in this directory |

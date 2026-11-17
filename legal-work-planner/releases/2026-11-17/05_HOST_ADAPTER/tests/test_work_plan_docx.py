@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: Apache-2.0
 """Synthetic artifact/adapter checks. No claims about an LLM or live host."""
 from datetime import datetime
 from hashlib import sha256
