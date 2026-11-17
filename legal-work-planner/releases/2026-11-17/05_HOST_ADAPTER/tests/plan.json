@@ -1,0 +1,34 @@
+{
+  "plan_id": "PL-002",
+  "version": "r1",
+  "as_of": "2026-11-17T12:00:00Z",
+  "commit_sha": "1234567890abcdef1234567890abcdef12345678",
+  "goal": "Prepare an internal amendment discussion",
+  "scope": {"included": "Review supplied amendment", "excluded": "No external legal advice"},
+  "recommended_approach": "Review, resolve open points, prepare briefing",
+  "start_here": "Read the supplied draft",
+  "work_items": [
+    {
+      "id": "WI-01",
+      "title": "Review draft & identify <open> issues",
+      "priority": "HIGH",
+      "status": "IN_PROGRESS",
+      "owner": "Reviewer (PROPOSAL)",
+      "dependencies": [],
+      "acceptance_criteria": ["Amendment compared against supplied baseline", "Unverified points marked UNKNOWN"],
+      "caveat": "Baseline access is UNVERIFIED"
+    },
+    {
+      "id": "WI-02",
+      "title": "Prepare meeting brief — Änderung",
+      "priority": "MEDIUM",
+      "status": "PLANNED",
+      "dependencies": ["WI-01"],
+      "acceptance_criteria": ["Decision options documented"]
+    }
+  ],
+  "open_decisions": [{"id": "D-01", "question": "Which amendment route?", "status": "OPEN"}],
+  "next_steps": ["Finish WI-01", "Resolve D-01 before WI-02"],
+  "done_when": "Brief is ready for internal discussion",
+  "additional_host_field": {"facts": [false, 0, null], "empty": {}, "note": "Keep this extension\nand this line\twith tab"}
+}
